@@ -24,6 +24,12 @@ class Product(models.Model):
         null=True,
         blank=True
     )
+    photo = models.ImageField(
+        verbose_name="Фотография",
+        null=True,
+        blank=True,
+        upload_to='products/'
+    )
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
